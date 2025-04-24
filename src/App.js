@@ -1,19 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './components/Home';
+import Footer from './components/Footer';
 import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Snapacte</h1>
-        <p>
-          Application de capture et gestion d'actes numériques
-        </p>
-      </header>
-      <main>
-        <p>Bienvenue dans l'application Snapacte!</p>
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* Ajouter d'autres routes ici quand les composants seront créés */}
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

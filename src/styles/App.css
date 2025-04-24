@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-header {
@@ -15,6 +17,10 @@
 }
 
 main {
+  flex: 1;
   margin: 20px;
   padding: 20px;
-} 
+}
+
+/* Importer Font Awesome pour les icônes */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); 
